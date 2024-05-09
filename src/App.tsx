@@ -1,10 +1,10 @@
-
-// Description: Blog app using react and typescript
+import './App.css'
 
 export default function App() {
+  console.log(import.meta.env.VITE_APPWRITE_URL);
   return (
-    <div>
+    <>
       <h1>Blog App</h1>
-    </div>
+    </>
   );
 }
