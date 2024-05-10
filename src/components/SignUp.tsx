@@ -43,13 +43,13 @@ const SignUp = () => {
         <h2 className="text-2xl font-bold text-center capitalize cursor-pointer">
           Sign in to Your Account
         </h2>
-        <p className="mt-2 text-base text-center text-black/60">
-          Don&apos;t have any account ? &nbsp;
+        <p className="mt-2 text-base text-center capitalize text-black/60">
+          have an account ? &nbsp;
           <Link
-            to={"/signup"}
+            to={"/login"}
             className="font-medium transition-all duration-200 text-slate-500 hover:underline"
           >
-            Sign Up
+            Login
           </Link>
         </p>
         {error && <p className="text-center text-red-500">{error}</p>}

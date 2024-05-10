@@ -9,16 +9,17 @@ interface RteProps {
   defaultValue: string;
 }
 
-const RTE = ({ name, control, onChange, defaultValue="" }: RteProps) => {
+const RTE = ({ name, control, onChange, defaultValue = "" }: RteProps) => {
   return (
     <div>
       <Controller
         name={name || "content"}
         control={control}
-        render={({ onChange }) => (
+        render={({ field: { onChange } }) => (
           <Editor
-            initialValue={defaultValue}
+            
             init={{
+              initialValue: defaultValue,
               branding: false,
               height: 500,
               menubar: true,
@@ -32,7 +33,7 @@ const RTE = ({ name, control, onChange, defaultValue="" }: RteProps) => {
               content_style:
                 "body { font-family: 'Roboto', sans-serif; font-size: 14px;}",
             }}
-            onEditorChange={onchange}
+            onEditorChange={() => onchange}
           />
         )}
       />

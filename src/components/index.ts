@@ -6,5 +6,11 @@ import Button from './Button.tsx'
 import Input from './Input.tsx'
 import Login from './Login.tsx'
 import SignUp from './SignUp.tsx'
+import Select from './Select.tsx'
+import PostForm from './post-form/PostForm.tsx'
+import PostCard from './PostCard.tsx'
+import AuthLayout from './AuthLayout.tsx'
 
-export { Header, Footer, SignUp, Container, LogoutBtn, Button, Input, Login };
+
+
+export { Header, Footer, SignUp, Select, Container, LogoutBtn, Button, Input, Login, PostForm, PostCard, AuthLayout };

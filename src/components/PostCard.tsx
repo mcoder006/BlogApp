@@ -7,19 +7,19 @@ interface PostCardProps {
     featuredImage: string;
 }
 
-const PostCard = ( { $id, title, featuredImage }: PostCardProps) => {
+const PostCard = ( post : PostCardProps) => {
   return (
-    <Link to={`/post/${$id}`}>
+    <Link to={`/post/${post.$id}`}>
         <div className="w-full p-4 bg-gray-100 rounded-xl">
             <div className="justify-center w-full mb-4">
-                <img src={service.getFilePreview(featuredImage)} alt={title}
+                <img src={service.getFilePreview(post.featuredImage)} alt={post.title}
                 className="rounded-xl"
                 />
                 Image
             </div>
             <h2
             className="text-xl font-bold"
-            >{title}</h2>
+            >{post.title}</h2>
         </div>
     </Link>
   )
