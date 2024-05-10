@@ -1,7 +1,9 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import authService from './services/auth';
 import { login, logout } from './store/AuthSlice';
+import { Footer, Header } from './components';
+import { Outlet } from 'react-router-dom';
 
 export default function App() {
 
@@ -21,7 +23,11 @@ export default function App() {
   if(!Loading) {
     return (
       <div className='w-screen min-h-screen'>
-        hello world
+        <Header />
+        <main>
+          <Outlet />
+        </main>
+        <Footer />
       </div>
     )
   }

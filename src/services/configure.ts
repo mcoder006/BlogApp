@@ -5,7 +5,7 @@ type CreatePost = {
     title: string;
     slug: string;
     content: string;
-    featuredImage: string;
+    featuredImage: URL;
     status: string;
     userId: string;
 };
@@ -13,7 +13,7 @@ type CreatePost = {
 type UpdatePost = {
     title: string;
     content: string;
-    featuredImage: string;
+    featuredImage: URL;
     status: string;
 };
 
@@ -133,7 +133,7 @@ export class Services {
         }
     }
 
-    getFilePreview( fileId: string ) {
+    getFilePreview( fileId: string) {
         try {
             return this.bucket.getFilePreview(
                 config.appwriteBucketId,
